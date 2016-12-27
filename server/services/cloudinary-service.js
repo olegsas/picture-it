@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const Image = mongoose.model('Image');
 
 cloudinary.config({
-    cloud_name: 'da14clfqg',
-    api_key: '544232953924527',
-    api_secret: 'lmxcf5a2o2cEqIcRqiHdtsy0gQo'
+    cloud_name: 'do5zrocew',
+    api_key: '176984263871615',
+    api_secret: '-4H2VvXsGsXn3O8zPU1HenjCZm8'
 });
 
 module.exports = {
