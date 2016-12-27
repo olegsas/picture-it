@@ -15,12 +15,12 @@ module.exports.register = function (req, res) {
 		return;
 	}
 	
-	let user = new User();
+	var user = new User();
 	user.local.name = req.body.name;
 	user.local.email = req.body.email;
 	user.setPassword(req.body.password);
 	user.save(function (err, response) {
-		let token;
+		var token;
 
 		if (err) {
 			sendJSONresponse(res, 404, err);
@@ -43,7 +43,7 @@ module.exports.login = function (req, res) {
 		return;
 	}
 	passport.authenticate('local', function (err, user, info) {
-		let token;
+		var token;
 		if (err) {
 			sendJSONresponse(res, 404, err);
 			return;

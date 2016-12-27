@@ -15,7 +15,7 @@ module.exports = {
             cloudinary.uploader.upload(req.files.image.path, function (result) {
                 if (result.url) {
                     // req.imageLink = result.url;
-                    let image = new Image();
+                    var image = new Image();
                     image.url = result.url;
                     image._owner = req.session._id;
                     image.save((err, response) => {
